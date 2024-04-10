@@ -1,9 +1,17 @@
 import domReady from '@roots/sage/client/dom-ready';
 import Swiper from 'swiper/bundle';
 import {setupTooltip} from './tooltips/PriceInfoTooltip.js';
+import { FormHandler } from './bookingManager/handlers/FormHandlers';
 
 /**
  * Application entrypoint
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    new FormHandler();
+});
+
+/**
+ * Original stuff
  */
 domReady(async () => {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
