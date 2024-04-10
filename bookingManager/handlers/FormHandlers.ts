@@ -1,28 +1,37 @@
-import { WebcarAPIHandler } from '../api/WebcarAPIHandler';
+import { BookingSummary } from '../BookingSummary';
 import { VehicleSelectionHandler } from '../VehicleSelectionHandler';
+import { ExtrasHandler } from '../ExtrasHandler';
+import { WebcarAPIHandler } from '../api/WebcarAPIHandler';
 
 export class FormHandler {
-    private vehicleHandler: VehicleSelectionHandler;
+    private readonly bookingSummary: BookingSummary;
+    private vehicleSelectionHandler: VehicleSelectionHandler;
+    private extrasHandler: ExtrasHandler;
 
     constructor() {
-        const apiHandler = new WebcarAPIHandler('https://yourapi.com/');
-        this.vehicleHandler = new VehicleSelectionHandler(apiHandler, 'vehicles-container-id');
+        const apiHandler = new WebcarAPIHandler('/wp/wp-admin/admin-ajax.php');
+        this.bookingSummary = new BookingSummary("bookingSummary");
+        this.vehicleSelectionHandler = new VehicleSelectionHandler(apiHandler, 'vehicles-container-id', this.bookingSummary);
+        this.extrasHandler = new ExtrasHandler(apiHandler, 'extras-container-id', this.bookingSummary);
         this.attachEventListeners();
     }
 
     private attachEventListeners(): void {
         const form = document.getElementById('rentform') as HTMLFormElement;
-        form.addEventListener('submit', this.handleSubmit.bind(this));
+        if (form) {
+            form.addEventListener('submit', this.handleFormSubmit.bind(this));
+        }
     }
 
-    private async handleSubmit(event: Event): Promise<void> {
+    private async handleFormSubmit(event: Event): Promise<void> {
         event.preventDefault();
         const formData = new FormData(event.target as HTMLFormElement);
-        await this.vehicleHandler.getAvailableVehicles(formData);
+
+        try {
+            await this.vehicleSelectionHandler.getAvailableVehicles(formData);
+            await this.extrasHandler.toggleExtras(formData);
+        } catch (error) {
+            console.error("Error processing form submission:", error);
+        }
     }
 }
-
-// Initialization
-document.addEventListener('DOMContentLoaded', () => {
-    new FormHandler();
-});

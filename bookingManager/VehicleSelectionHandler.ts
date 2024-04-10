@@ -1,13 +1,18 @@
 // VehicleSelectionHandler.ts
-import { IBookingSummary, IVehicleSelectionHandler } from './interfaces/IBookingProcess';
-import { WebcarAPIHandler } from './api/WebcarAPIHandler';
+import { IBookingSummary } from './interfaces/IBookingProcess';
+import { IAPIHandler } from './interfaces/IAPIHandler';
 
-export class VehicleSelectionHandler implements IVehicleSelectionHandler {
-    private apiHandler: WebcarAPIHandler;
+export class VehicleSelectionHandler {
+    private apiHandler: IAPIHandler;
+    private containerId: string;
+    private bookingSummary: IBookingSummary;
 
-    constructor(apiHandler: WebcarAPIHandler, private containerId: string) {
+    constructor(apiHandler: IAPIHandler, containerId: string, bookingSummary: IBookingSummary) {
         this.apiHandler = apiHandler;
+        this.containerId = containerId;
+        this.bookingSummary = bookingSummary;
     }
+
     async getAvailableVehicles(formData: FormData): Promise<void> {
         try {
             const vehiclesHTML = await this.apiHandler.postData({
