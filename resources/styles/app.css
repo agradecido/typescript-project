@@ -1,0 +1,33 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Para tener los estilos del editor en el front: */
+@import '../../../../../wp/wp-includes/css/dist/block-library/style.css';
+
+@import 'vars.scss';
+@import 'main.scss';
+@import 'page.scss';
+
+@import 'components/alert.scss';
+@import 'components/tooltips.scss';
+@import 'components/boxes.scss';
+
+@import 'partials/fleet-filter.scss';
+
+@import 'sections/header.scss';
+@import 'sections/footer.scss';
+@import 'sections/home/features.scss';
+@import 'sections/home/cars-gallery.scss';
+@import 'sections/home/form.scss';
+
+@import 'pages/home.scss';
+@import 'pages/contact.scss';
+@import 'pages/our-fleet.scss';
+@import 'pages/locations.scss';
+@import 'pages/offices.scss';
+
+@import 'booking/form.scss';
+@import 'booking/booking.scss';
+@import 'booking/steps.scss';

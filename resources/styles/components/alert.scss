@@ -1,0 +1,7 @@
+.alert  {
+  border: 1px solid orangered;
+  padding: 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+  @apply bg-red-100 text-red-900 rounded-lg;
+}

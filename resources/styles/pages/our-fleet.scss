@@ -1,0 +1,69 @@
+.nuestra-flota {
+  background-color: #fff;
+  padding-bottom: 2rem;
+}
+
+.nuestra-flota .page-header {
+  background-color: var(--header-background-color);
+  margin-bottom: 0;
+}
+
+.nuestra-flota p.container--limit-width {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+.nuestra-flota .our-fleet {
+  background-color: #fff;
+  max-width: 1200px;
+  padding: 2rem 1rem;
+}
+.nuestra-flota .our-fleet h3 {
+  font-size: 1rem;
+}
+.nuestra-flota .our-fleet {
+  padding-bottom: 3rem;
+}
+.nuestra-flota .our-fleet p {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nuestra-flota .our-fleet .car-spec {
+  font-size: .75rem;
+  margin-right: 20px;
+}
+.nuestra-flota .our-fleet .car-spec i {
+  margin-right: 7px;
+}
+
+.nuestra-flota .our-fleet div {
+  transition: opacity 0.5s ease-out;
+  opacity: 1;
+}
+
+.nuestra-flota .our-fleet-hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.nuestra-flota .our-fleet .our-fleet--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 2rem;
+}
+
+.office-data  {
+  p {
+    font-size: 1rem;
+    color: rgb(71 85 105 / var(--tw-text-opacity));
+  }
+}
+@media (min-width: 1024px) {
+  .nuestra-flota .our-fleet {
+
+  }
+}

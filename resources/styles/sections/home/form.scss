@@ -1,0 +1,63 @@
+/*  Home reserve form */
+
+.hero-renthub-form {
+  position: relative;
+  top: -75px;
+  margin-left: 24px;
+  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    display: none ! important;
+  }
+
+  select, input {
+    height: 40px;
+    border: 1px solid #ccc;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-field {
+    flex: 1;
+  }
+
+  input::placeholder, select option[disabled] {
+    color: var(--gray-color-text);
+  }
+
+  button:disabled {
+    background-color: var(--gray-color-text);
+    cursor: not-allowed;
+  }
+
+}
+
+@media (min-width: 576px) {
+  .hero-renthub-form {
+    max-width: 440px ! important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-renthub-form {
+    max-width: 840px ! important;
+
+    .form-row {
+      flex-direction: row;
+      gap: 15px;
+    }
+
+    .form-field {
+
+    }
+
+    .form-row:last-child .form-field:last-child {
+      margin-right: 0;
+    }
+  }
+}

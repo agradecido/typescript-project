@@ -1,0 +1,28 @@
+.fleet-filters-container {
+    width: 100%;
+    background-color: var(--header-background-color);
+    padding: 2rem 0;
+    margin-top: 0;
+    .fleet-filters {
+        .fleet-filter {
+            &__item {
+            }
+            &__active {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .fleet-filters {
+        flex-wrap: wrap;
+    }
+
+    .fleet-filter__item {
+        text-align: center;
+        margin-left: 0 !important;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}

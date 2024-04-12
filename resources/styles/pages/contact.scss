@@ -1,0 +1,42 @@
+/**
+* Contact Page
+*/
+.contacto {
+    background-color: #fff;
+    .page-header {
+        background-color: var(--header-background-color);
+    }
+    p {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
+body .is-layout-flex > .wpcf7 {
+    margin-left: auto;
+    margin-right: auto;
+}
+.wpcf7 {
+    max-width: 600px;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input,
+textarea {
+    border: 1px solid var(--form-border-color);
+    padding: 5px;
+    width: 100%;
+    border-radius: var(--form-border-radius);
+}
+
+input[type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

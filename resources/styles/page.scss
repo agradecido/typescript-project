@@ -1,0 +1,47 @@
+/* Interior Page */
+.page {
+
+    .main,
+    .main .page-header,
+    .main .content-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+.home {
+    .main,
+    .main .page-header,
+    .main .content-container {
+        max-width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+.main .page-header {
+    padding: 2rem 0;
+    margin-bottom: 1.5rem;
+    h1 {
+        color: var(--main-color);
+    }
+    h1 {
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        color: var(--main-color);
+    }
+}
+
+.content-container {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.container--limit-width {
+    max-width: 1200px ! important;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}

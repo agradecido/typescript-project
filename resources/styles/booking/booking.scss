@@ -1,0 +1,227 @@
+.booking {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.animated-button.animate {
+  background: linear-gradient(270deg, #ff9a00, #ff165d);
+  background-size: 200% 200%;
+  animation: gradient 2s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#vehiclesListId {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  h1 {
+    font-size: 1.5rem ! important;
+  }
+
+  .booking-header {
+  }
+
+  .car-card {
+    padding: 10px 20px 20px 20px;
+
+    .priceInfoTooltipTrigger {
+      display: inline-flex;
+      font-size: .75rem;
+      @apply text-gray-500
+    }
+
+    .car-card-header {
+      display: block;
+
+      h4 {
+        font-size: 1.7rem;
+        line-height: 1.7rem;
+        margin-bottom: 20px;
+      }
+
+      .car-price-button {
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+
+        .price-per-day {
+          font-size: 1rem;
+          line-height: .75rem;
+          font-weight: normal;
+          margin-top: 10px;
+          color: var(--gray-color-text);
+        }
+      }
+    }
+
+    .car-description {
+      font-size: 1rem;
+      color: var(--gray-color-text);
+      margin-bottom: 2rem;
+    }
+
+
+    .car-specs {
+      padding: 0 1rem;
+      margin: 0 auto 2rem auto;
+
+      li {
+        width: 130px;
+      }
+    }
+
+    .car-button {
+      position: relative;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+    }
+
+    .car-cta {
+
+      p:last-of-type {
+        font-size: .75rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        text-align: center;
+      }
+
+      .car-prices {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .car-card {
+      padding: 10px 40px 20px 40px;
+
+      .car-card-header {
+        h4 {
+          font-size: 1.8rem;
+          margin: 0;
+        }
+
+        display: flex;
+        align-items: center;
+
+        .card-price-button {
+          padding: 12px 10px 10px 10px;
+          width: 100px;
+
+        }
+      }
+    }
+
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1240px ! important;
+    margin-left: auto;
+    margin-right: auto;
+    h1 {
+      font-size: 2rem ! important;
+    }
+    .car-card {
+      gap: 2rem;
+
+      .car-price-button {
+        display: none !important;
+      }
+
+      .car-photo {
+        display: flex;
+        align-items: center;
+        width: 400px;
+        min-width: 400px;
+        max-width: 400px;
+      }
+
+      .car-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .car-specs {
+          li {
+            width: 200px;
+          }
+        }
+
+      }
+
+      .car-cta {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        p:last-of-type {
+          text-align: left;
+          margin-top: .5rem;
+        }
+
+        .car-button {
+          min-width: 200px;
+          width: 200px;
+        }
+
+        .car-prices {
+          display: flex;
+          flex-direction: column;
+          text-align: right;
+
+          :nth-child(3) {
+            display: none;
+          }
+
+          small {
+            color: var(--gray-color-text);
+          }
+
+          .priceInfoTooltipTrigger {
+            display: inline-flex;
+          }
+
+          .car-final-price {
+            font-size: 2.75rem;
+            line-height: 2.75rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.booking-summary {
+  &__data {
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+}
+

@@ -1,0 +1,72 @@
+.reserveform {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  h2 {
+    display: none ! important;
+  }
+
+  select, input {
+    height: 40px;
+    border: 1px solid #ccc;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-field {
+    flex: 1;
+  }
+
+  input::placeholder, select option[disabled] {
+    color: var(--gray-color-text);
+  }
+
+  button:disabled {
+    background-color: var(--gray-color-text);
+    cursor: not-allowed;
+  }
+
+  label {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .reserveform {
+
+  }
+}
+
+@media (min-width: 1024px) {
+  .reserveform {
+
+    margin-left: auto;
+    margin-right: auto;
+
+    .form-row {
+      flex-direction: row;
+      gap: 15px;
+    }
+
+    .form-field {
+
+    }
+
+    .form-row:last-child .form-field:last-child {
+      margin-right: 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: .5rem;
+      color: var(--gray-color-text);
+    }
+  }
+}
