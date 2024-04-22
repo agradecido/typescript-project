@@ -1,12 +1,14 @@
 {{-- booking/sections/extras-form.blade.php --}}
-<div id="extrasContainerId"
-     class="hidden mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full rounded-2xl">
-    <form method="POST" id="extrasForm">
-        <div class="extras-data" id="extrasDataContainerId">
+<div id="extrasContainerId" class="hidden mx-auto">
+    <form method="POST" id="extrasFormId">
+        <h2 class="text-2xl font-bold text-center">
+            @php _e( 'Seleccione los Extras', 'iscar' ); @endphp
+        </h2>
+        <div class="extras-data rounded-2xl" id="extrasDataContainerId">
         </div>
         <div class="text-center mt-6">
-            <button type="submit"
-                    class="animated-button  w-full h-10 font-bold bg-amber-400 hover:bg-amber-600 text-white py-2 px-6 rounded-lg">
+            <button type="submit" id="extrasSubmitId"
+                    class="animated-button w-1/2 h-10 font-bold bg-amber-400 hover:bg-amber-600 text-white py-2 px-6 rounded-lg">
                 Continuar
             </button>
         </div>

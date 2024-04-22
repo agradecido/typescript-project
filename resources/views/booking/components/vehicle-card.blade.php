@@ -60,8 +60,8 @@
             <span class="car-final-price">{{ $car['total_price'] }}€</span>
             <small>({{$car['price_per_day']}}€/día)</small>
         </div>
-        <div data-totalDays="{{ $car['total_days'] }}" data-category="{{ $car['category'] }}"
-             class="get-extras-btn car-button rounded-xl items-center py-4 font-bold text-center text-white bg-amber-400 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-amber-400">
+        <div data-totalDays="{{ $car['total_days'] }}" data-category="{{ $car['category'] }}" data-price="{{ $car['total_price'] }}"
+             class="get-extras-btn car-button rounded-xl w-3/4 mx-auto items-center py-2 lg:py-4 font-bold text-center text-white bg-amber-400 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-amber-400">
                 @php echo __('Reservar ahora', 'iscar'); @endphp
         </div>
         <p>Podrá seleccionar la extras en el siguiente paso.</p>

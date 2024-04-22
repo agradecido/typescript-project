@@ -31,6 +31,7 @@ export function setupTooltip() {
         });
 
         document.addEventListener('click', (event) => {
+            // @ts-ignore
             if (!infoIcon.contains(event.target)) {
                 tooltip.style.display = 'none';
             }

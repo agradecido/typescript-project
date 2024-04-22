@@ -58,7 +58,7 @@
                            placeholder="Fecha de recogida" onfocus="this.type='date';"
                            onblur="if (!this.value) this.type='text'; this.placeholder = 'Fecha de recogida';"
                            required
-                           value="{{ date('Y-m-d', strtotime('+2 day')) }}"
+                           value="{{ date('d-m-Y', strtotime('+1 day')) }}"
                     >
                 </div>
                 <!-- Hora recogida -->
@@ -96,12 +96,12 @@
                 <!-- Fecha  entrega -->
                 <div class="w-full lg:w-1/3 mb-4 text-center">
                     <label for="date_to">Fecha de entrega</label>
-                    <input type="text" id="date_to" name="date_to"
+                    <input type="date" id="date_to" name="date_to"
                            class="bg-transparent p-2 rounded-lg w-full text-center"
                            placeholder="Fecha de entrega" onfocus="this.type='date';"
                            onblur="if (!this.value) this.type='text'; this.placeholder = 'Fecha de devolución';"
                            required
-                           value="{{ date('Y-m-d', strtotime('+4 day')) }}"
+                           value="{{ date('d-m-Y', strtotime('+7 day')) }}"
                     >
                 </div>
                 <!-- Hora entrega -->

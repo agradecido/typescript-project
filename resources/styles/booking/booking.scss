@@ -1,3 +1,13 @@
+
+.booking-summary {
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+}
+
 .booking {
   max-width: 1240px;
   margin-left: auto;
@@ -93,6 +103,13 @@
       line-height: 1.2rem;
     }
 
+    .car-button:hover {
+      background: linear-gradient(270deg, #ff9a00, #ff165d);
+      background-size: 200% 200%;
+      animation: gradient 2s ease infinite;
+      cursor: pointer;
+    }
+
     .car-cta {
 
       p:last-of-type {
@@ -107,6 +124,7 @@
       }
     }
   }
+
 
   @media (min-width: 768px) {
     .car-card {
@@ -184,6 +202,14 @@
           width: 200px;
         }
 
+        .car-button:hover {
+            background: linear-gradient(270deg, #ff9a00, #ff165d);
+            background-size: 200% 200%;
+            animation: gradient 2s ease infinite;
+            cursor: pointer;
+          }
+
+
         .car-prices {
           display: flex;
           flex-direction: column;
@@ -215,13 +241,22 @@
   }
 }
 
-.booking-summary {
-  &__data {
-
-    display: flex;
-    justify-content: space-between;
+#finalBookingFormId .client-data {
+  >div {
+    min-width: 300px;
     margin-bottom: 1rem;
-    gap: 1rem;
+  }
+  label {
+    margin-bottom: .15rem;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    >div {
+      min-width: 600px;
+      max-width: 600px;
+    }
+    label {
+      margin-bottom: .5rem;
+    }
   }
 }
-

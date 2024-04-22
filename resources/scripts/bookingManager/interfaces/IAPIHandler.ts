@@ -6,6 +6,10 @@ export interface PostDataParams {
     data: FormData | Record<string, any>;  // Data can be either FormData for form submissions or a plain object for JSON payload
 }
 
+// export interface getExtraName {
+//     postData(id: string): Promise<string>;
+// }
+
 export interface IAPIHandler {
     postData(params: PostDataParams): Promise<string>;  // Promise that resolves to a string (could be JSON string or HTML)
 }

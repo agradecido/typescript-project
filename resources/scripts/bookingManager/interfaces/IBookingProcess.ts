@@ -12,7 +12,3 @@ export interface IVehicleSelectionHandler {
     getAvailableVehicles(formData: FormData): Promise<void>;
 }
 
-export interface IExtrasHandler {
-    toggleExtra(extraId: string, isChecked: boolean): void;
-}
-

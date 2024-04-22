@@ -1,0 +1,221 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Iscar Theme 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/iscar-theme\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-02-04T19:22:06+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: ca\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: iscar\n"
+
+#. Theme Name of the theme
+msgid "Iscar Theme"
+msgstr "Tema Iscar"
+
+#. Theme URI of the theme
+msgid "https://roots.io/sage/"
+msgstr "https://roots.io/sage/"
+
+#. Description of the theme
+msgid "Theme for Rental Car Website"
+msgstr "Tema per a lloguer de cotxes"
+
+#. Author of the theme
+msgid "Javier Sierra | Roots"
+msgstr "Javier Sierra | Roots"
+
+#. Author URI of the theme
+msgid "https://www.manerasdevivir.com"
+msgstr "https://www.manerasdevivir.com"
+
+#: app/Models/CarModel.php:34
+msgid "Aire Acondicionado"
+msgstr "Aire condicionat"
+
+#: app/Models/CarModel.php:38
+msgid "Puertas"
+msgstr "Portes"
+
+#: app/Models/CarModel.php:39
+msgid "Asientos"
+msgstr "Seients"
+
+#: app/Models/CarModel.php:42
+msgid "Pasajeros"
+msgstr "Passatgers"
+
+#. Template Name of the theme
+msgid "Página contacto"
+msgstr "Pàgina de contacte"
+
+#. Template Name of the theme
+msgid "Interior Page Template"
+msgstr "Plantilla de pàgina interior"
+
+#. Template Name of the theme
+msgid "Page With Filters Template"
+msgstr "Plantilla de pàgina amb filtres"
+
+#. Template Name of the theme
+msgid "Our Fleet Template"
+msgstr "Plantilla de la nostra flota"
+
+#. Template Name of the theme
+msgid "Rentub Reservation"
+msgstr "Reserva Rentub"
+
+#: resources/views/404.blade.php:8
+msgid "La página que estás buscando no existe."
+msgstr "La pàgina que estàs buscant no existeix."
+
+#: resources/views/forms/rent-form.blade.php:6
+msgid "Reserva tu vehículo"
+msgstr "Reserva el teu vehicle"
+
+#: resources/views/forms/rent-form.blade.php:12
+msgid "Lugar de recogida"
+msgstr "Lloc de recollida"
+
+#: resources/views/forms/rent-form.blade.php:34
+msgid "Fecha de recogida"
+msgstr "Data de recollida"
+
+#: resources/views/forms/rent-form.blade.php:40
+msgid "Fecha de devolución"
+msgstr "Data de devolució"
+
+#: resources/views/forms/rent-form.blade.php:45
+msgid "Buscar"
+msgstr "Cerca"
+
+#: resources/views/partials/cards/car.blade.php:55
+msgid "Alquilar ahora"
+msgstr "Llogar ara"
+
+#: resources/views/partials/fleet/fleet-car-info.blade.php:3
+msgid "o similar"
+msgstr "o similar"
+
+#: resources/views/partials/fleet/fleet-car-info.blade.php:10
+msgid "pasajeros"
+msgstr "passatgers"
+
+#: resources/views/partials/fleet/fleet-car-info.blade.php:16
+msgid "puertas"
+msgstr "portes"
+
+#: resources/views/partials/fleet/fleet-car-info.blade.php:20
+msgid "manual"
+msgstr "manual"
+
+#: resources/views/partials/fleet/fleet-categories.blade.php:4
+msgid "Todos"
+msgstr "Tots"
+
+#: resources/views/sections/footer.blade.php:10
+msgid "Empresa"
+msgstr "Empresa"
+
+#: resources/views/sections/footer.blade.php:15
+msgid "Aviso legal"
+msgstr "Avís legal"
+
+#: resources/views/sections/footer.blade.php:20
+msgid "Política de privacidad"
+msgstr "Política de privacitat"
+
+#: resources/views/sections/footer.blade.php:25
+msgid "Política de cookies"
+msgstr "Política de cookies"
+
+#: resources/views/sections/footer.blade.php:32
+msgid "Alquileres"
+msgstr "Lloguers"
+
+#: resources/views/sections/footer.blade.php:38
+msgid "Puntos de entrega y recogida"
+msgstr "Punts d'entrega i recollida"
+
+#: resources/views/sections/footer.blade.php:43
+msgid "Entrega en el aeropuerto"
+msgstr "Entrega a l'aeroport"
+
+#: resources/views/sections/footer.blade.php:48
+msgid "Entrega en el hotel"
+msgstr "Entrega a l'hotel"
+
+#: resources/views/sections/footer.blade.php:55
+#: resources/views/sections/home/hero.blade.php:14
+msgid "Contáctanos"
+msgstr "Contacta'ns"
+
+#: resources/views/sections/footer.blade.php:60
+msgid "España"
+msgstr "Espanya"
+
+#: resources/views/sections/footer.blade.php:66
+msgid "Suscríbete a nuestra newsletter y recibe ofertas exclusivas"
+msgstr "Subscriu-te a la nostra newsletter i rep ofertes exclusives"
+
+#: resources/views/sections/footer.blade.php:74
+msgid "Todos los derechos reservados"
+msgstr "Tots els drets reservats"
+
+#: resources/views/sections/home/hero.blade.php:4
+msgid "Disfruta"
+msgstr "Disfruta"
+
+#: resources/views/sections/home/hero.blade.php:5
+msgid "de"
+msgstr "de"
+
+#: resources/views/sections/home/hero.blade.php:6
+msgid "sin límites"
+msgstr "sense límits"
+
+#: resources/views/sections/home/hero.blade.php:7
+msgid "Elige tu coche ideal"
+msgstr "Triï el teu cotxe ideal"
+
+#: resources/views/shortcodes/fleet.blade.php:16
+msgid "Alquilar"
+msgstr "Llogar"
+
+#: resources/views/shortcodes/offices.blade.php:9
+msgid "Cargando el mapa..."
+msgstr "Carregant el mapa..."
+
+#: resources/views/shortcodes/offices.blade.php:22
+msgid "Dirección"
+msgstr "Adreça"
+
+#: resources/views/shortcodes/offices.blade.php:31
+msgid "Horario"
+msgstr "Horari"
+
+#: app/Blocks/CarsGallery/block.json
+#: app/GutenbergBlocks/Blocks/cars-gallery-block/block.json
+msgctxt "block title"
+msgid "Galería de vehículos"
+msgstr "Galeria de vehicles"
+
+#: app/Blocks/CarsGallery/block.json
+#: app/GutenbergBlocks/Blocks/cars-gallery-block/block.json
+msgctxt "block description"
+msgid "Nuestros vehículos"
+msgstr "Els nostres vehicles"
+
+#: app/GutenbergBlocks/Blocks/features/block.json
+msgctxt "block title"
+msgid "Destacados"
+msgstr "Destacats"
+
+#: app/GutenbergBlocks/Blocks/features/block.json
+msgctxt "block description"
+msgid "Nuestros servicios destacados"
+msgstr "Els nostres serveis destacats"

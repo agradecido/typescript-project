@@ -1,8 +1,8 @@
-// api/Vehicle.ts
+// api/Office.ts
 import { APIHandler} from "./APIHandler";
 import { AppConfig } from "../AppConfig";
 
-export class Vehicle {
+export class Office {
     public data: {};
     private readonly apiHandler: APIHandler;
 
@@ -11,19 +11,20 @@ export class Vehicle {
         this.apiHandler = new APIHandler(AppConfig.apiBaseUrl, AppConfig.nonce);
     }
 
-    public async getVehicleDetails( categoryId: string ): Promise<string | undefined> {
+    public async getOfficeDetails( officeId: string ): Promise<string | undefined> {
         const data = new FormData();
-        data.append( 'car_id', categoryId );
+        data.append( 'office_id', officeId );
         try {
             const response = await this.apiHandler.postData({
-                url: AppConfig.getVehicleDetails,
+                url: AppConfig.getOfficeDetails,
                 data: data,
             });
-            const vehicles = JSON.parse(response);
-            return vehicles.data;
+
+            const office = JSON.parse(response);
+            return office.data.name;
         } catch (error) {
-            console.error('Error in getVehicleList:', error);
-            throw new Error('Error in getVehicleList: ' + error);
+            console.error('Error in getOfficeDetails:', error);
+            throw new Error('Error in getOfficeDetails: ' + error);
         }
     }
 

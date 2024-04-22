@@ -1,9 +1,14 @@
 /* steps.scss */
 
-.booking-steps {
 
+.booking-steps {
+  margin-bottom: 2rem;
+
+  .swiper-slide {
+    height: 200px;
+  }
   h2 {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
   .step {
     display: flex;
@@ -24,10 +29,18 @@
       font-size: 1rem;
     }
 
-    .booking-summary {
-      max-width: 300px;
+    ul, p {
+      font-size: .8rem;
     }
 
+    .booking-summary {
+      margin-top: 2rem;
+      &__data {
+        width: 100%;
+        min-width: 300px;
+
+      }
+    }
     &__active {
       background-color: var(--main-color);
     }
@@ -35,12 +48,20 @@
     &__disabled {
       background-color: var(--color-grey);
     }
-  }
 
+  }
+  #step1 {
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
   #step2 {
     img {
       width: 200px;
     }
+  }
+  #step5 {
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
   }
   
   .swiperBookingSteps-pagination {
@@ -77,13 +98,13 @@
   .swiperBookingSteps {
     flex-direction: row;
     gap: 1rem;
-
     .step {
       flex-direction: column;
       justify-content: space-around;
       text-align: center;
       padding: 1rem;
       height: 200px;
+
 
       h2 {
         margin-bottom: 0;
@@ -96,9 +117,15 @@
         font-size: 1rem;
       }
       .booking-summary {
-        max-width: 200px;
-        min-width: 200px;
+        margin-top: 0;
         font-size: .8rem;
+        &__data {
+          row-gap: 10px;
+          flex-direction: column;
+          .step1__arrow {
+            display: none;
+          }
+        }
       }
     }
     .navigation-buttons {

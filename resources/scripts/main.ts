@@ -1,10 +1,11 @@
 // main.ts
-import { FormHandler } from './bookingManager/handlers/FormHandlers';
+
+import {Step1FormHandler} from "./bookingManager/Step1FormHandler";
 
 /**
  * Application entrypoint
  */
 document.addEventListener('DOMContentLoaded', () => {
-    new FormHandler();
+    new Step1FormHandler();
 });
 

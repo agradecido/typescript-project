@@ -1,26 +1,14 @@
 import domReady from '@roots/sage/client/dom-ready';
-import Swiper from 'swiper/bundle';
-import {setupTooltip} from './tooltips/PriceInfoTooltip.js';
-import { FormHandler } from './bookingManager/handlers/FormHandlers';
-import { BookingManager } from './bookingManager/BookingManager';
-/**
- * Application entrypoint
- */
+import Swiper from 'swiper';
+import {setupTooltip} from './tooltips/PriceInfoTooltip';
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const apiBaseUrl = '/wp/wp-admin/admin-ajax.php';  // Set the base URL for your API
-//     const bookingManager = new BookingManager(apiBaseUrl);
-//     new FormHandler(bookingManager); // Assuming FormHandler takes a BookingManager now
-// });
-
-/**
- * Original stuff
- */
 domReady(async () => {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
+    // @ts-ignore
     mobileMenuButton.addEventListener('click', () => {
+        // @ts-ignore
         mobileMenu.classList.toggle('hidden');
     });
 });
@@ -56,6 +44,7 @@ domReady(async () => {
 
 setupTooltip();
 
-document.querySelector('.animated-button').addEventListener('click', function (e) {
+document.querySelector('.animated-button')?.addEventListener('click', function (e) {
+    // @ts-ignore
     this.classList.add('animate');
 });

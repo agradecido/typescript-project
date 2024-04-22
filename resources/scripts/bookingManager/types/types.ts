@@ -9,7 +9,12 @@ export interface BookingSummaryDataType {
     returnTime: string;
     pickupLocation: string;
     returnLocation: string;
-    price: string;
+    price: number;
     totalDays: number;
-    extras: string[];
+    extras: Array<{
+        id: string;
+        name: string;
+        pricePerDay: number;
+        quantity: number;
+    }>;
 }
