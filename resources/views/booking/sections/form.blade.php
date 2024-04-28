@@ -42,11 +42,11 @@
                             @php echo __('Lugar de recogida', 'iscar'); @endphp
                         </option>
                         @foreach ($offices as $office)
-                            if (isset($_POST['from']) && $_POST['from'] == $office['name']) {
+                            @if (isset($_POST['from']) && $_POST['from'] == $office['name'])
                             <option value="01" selected>{{ $office['name'] }}</option>
-                            } else {
+                            @else
                             <option value="01">{{ $office['name'] }}</option>
-                            }
+                            @endif
                         @endforeach
                     </select>
                 </div>
@@ -58,7 +58,7 @@
                            placeholder="Fecha de recogida" onfocus="this.type='date';"
                            onblur="if (!this.value) this.type='text'; this.placeholder = 'Fecha de recogida';"
                            required
-                           value="{{ date('d-m-Y', strtotime('+1 day')) }}"
+                           value=""
                     >
                 </div>
                 <!-- Hora recogida -->
@@ -85,11 +85,11 @@
                             @php echo __('Lugar de entrega', 'iscar'); @endphp
                         </option>
                         @foreach ($offices as $office)
-                            if (isset($_POST['to']) && $_POST['to'] == $office['name']) {
-                            <option value="01" selected>{{ $office['name'] }}</option>
-                            } else {
-                            <option value="01">{{ $office['name'] }}</option>
-                            }
+                            @if (isset($_POST['to']) && $_POST['to'] == $office['name'])
+                                <option value="{{ $office['id'] }}" selected>{{ $office['name'] }}</option>
+                            @else
+                                <option value="{{ $office['id'] }}">{{ $office['name'] }}</option>
+                            @endif
                         @endforeach
                     </select>
                 </div>
@@ -101,7 +101,7 @@
                            placeholder="Fecha de entrega" onfocus="this.type='date';"
                            onblur="if (!this.value) this.type='text'; this.placeholder = 'Fecha de devolución';"
                            required
-                           value="{{ date('d-m-Y', strtotime('+7 day')) }}"
+                           value=""
                     >
                 </div>
                 <!-- Hora entrega -->

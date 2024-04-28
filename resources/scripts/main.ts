@@ -1,11 +1,20 @@
 // main.ts
 
-import {Step1FormHandler} from "./bookingManager/Step1FormHandler";
+import {DatesAndOffices} from "./bookingManager/DatesAndOffices";
 
 /**
  * Application entrypoint
  */
 document.addEventListener('DOMContentLoaded', () => {
-    new Step1FormHandler();
+    new DatesAndOffices();
 });
 
+
+(function(window) {
+    window.onload = function() {
+        window.history.pushState(null, "No back", "nobackpage");
+        window.onpopstate = function() {
+            window.history.pushState(null, "No back", "nobackpage");
+        };
+    };
+})(window);

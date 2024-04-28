@@ -2,11 +2,12 @@
 import {BookingSummaryDataType} from "./types/types";
 import {SwiperHandler} from "./handlers/SwiperHandler";
 import domReady from "@roots/sage/lib/client/dom-ready";
-import {RenderSwiperSteps} from "./RenderSwiperSteps";
+import {RenderSwiperSteps} from "./handlers/RenderSwiperSteps";
 import {APIHandler} from "./api/APIHandler";
 
 export class AppConfig {
 
+    static maxStep = 1;
     // API
     static readonly apiBaseUrl = '/wp/wp-admin/admin-ajax.php';
     static readonly nonce = 'ajax_object.nonce';
@@ -91,7 +92,7 @@ export class AppConfig {
         extras: []
     }
 
-    static summaryPrice = {}
+    static summaryTotalPrice: number = 0;
 
     static summaryData: BookingSummaryDataType = {
         vehicleName: "",
@@ -105,8 +106,37 @@ export class AppConfig {
         returnLocation: "",
         price: 0,
         totalDays: 0,
-        extras: [],
+        extras: [
+            {
+                id: "",
+                name: "",
+                pricePerDay: 0,
+                quantity: 0
+            }
+        ],
     };
+
+    static calculateTotalPrice(): void {
+        let totalPriceExtras: number;
+        totalPriceExtras = AppConfig.summaryData.extras.reduce((acc, curr) => acc + curr.pricePerDay * curr.quantity, 0);
+        AppConfig.summaryTotalPrice = AppConfig.summaryData.price + totalPriceExtras;
+    }
+
+    static stepsContainers = {
+        '1': AppConfig.formContainer,
+        '2': AppConfig.vehiclesListContainer,
+        '3': AppConfig.extrasContainer,
+        '4': AppConfig.extrasContainer,
+        '5': AppConfig.extrasContainer,
+    }
+
+    static showStepContainer(step: number) {
+        Object.values(AppConfig.stepsContainers).forEach(container => {
+            container.classList.add('hidden');
+        });
+        // @ts-ignore
+        AppConfig.stepsContainers[step]?.classList.remove('hidden');
+    }
 
     // Update RenderSwiperSteps Data
     static update(newData: BookingSummaryDataType) {

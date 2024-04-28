@@ -20,7 +20,7 @@
 {{--                    <p id="finalBookingCarId"></p>--}}
 {{--                </div>--}}
 {{--                <div class="flex justify-between">--}}
-{{--                    <p>Step3Extras:</p>--}}
+{{--                    <p>Extras:</p>--}}
 {{--                    <p id="finalBookingExtrasId"></p>--}}
 {{--                </div>--}}
 {{--                <div class="flex justify-between">--}}
